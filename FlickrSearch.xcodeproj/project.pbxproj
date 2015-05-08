@@ -15,6 +15,7 @@
 		5D39ECF71AFB64EC005D125C /* FlickrSearcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D39ECF61AFB64EC005D125C /* FlickrSearcher.swift */; };
 		5D39ECF91AFB6C25005D125C /* FlickrPhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D39ECF81AFB6C25005D125C /* FlickrPhotosViewController.swift */; };
 		5D39ECFB1AFB6E52005D125C /* FlickrPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D39ECFA1AFB6E52005D125C /* FlickrPhotoCell.swift */; };
+		5D39ECFD1AFC565A005D125C /* FlickrPhotoHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D39ECFC1AFC565A005D125C /* FlickrPhotoHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		5D39ECF61AFB64EC005D125C /* FlickrSearcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrSearcher.swift; sourceTree = "<group>"; };
 		5D39ECF81AFB6C25005D125C /* FlickrPhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotosViewController.swift; sourceTree = "<group>"; };
 		5D39ECFA1AFB6E52005D125C /* FlickrPhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotoCell.swift; sourceTree = "<group>"; };
+		5D39ECFC1AFC565A005D125C /* FlickrPhotoHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotoHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				5D39ECD41AFB601C005D125C /* AppDelegate.swift */,
 				5D39ECD81AFB601C005D125C /* Main.storyboard */,
 				5D39ECF81AFB6C25005D125C /* FlickrPhotosViewController.swift */,
+				5D39ECFC1AFC565A005D125C /* FlickrPhotoHeaderView.swift */,
 				5D39ECFA1AFB6E52005D125C /* FlickrPhotoCell.swift */,
 				5D39ECF61AFB64EC005D125C /* FlickrSearcher.swift */,
 				5D39ECDB1AFB601C005D125C /* Images.xcassets */,
@@ -220,6 +223,7 @@
 			files = (
 				5D39ECF91AFB6C25005D125C /* FlickrPhotosViewController.swift in Sources */,
 				5D39ECFB1AFB6E52005D125C /* FlickrPhotoCell.swift in Sources */,
+				5D39ECFD1AFC565A005D125C /* FlickrPhotoHeaderView.swift in Sources */,
 				5D39ECF71AFB64EC005D125C /* FlickrSearcher.swift in Sources */,
 				5D39ECD51AFB601C005D125C /* AppDelegate.swift in Sources */,
 			);

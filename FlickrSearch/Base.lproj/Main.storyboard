@@ -14,7 +14,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qPp-3Y-pAG">
                             <size key="itemSize" width="200" height="200"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="headerReferenceSize" width="50" height="90"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
@@ -29,25 +29,52 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WEo-If-fqN">
                                             <rect key="frame" x="5" y="5" width="190" height="190"/>
                                         </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Nwv-By-8pd">
+                                            <rect key="frame" x="82" y="81" width="37" height="37"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="WEo-If-fqN" secondAttribute="trailing" constant="5" id="Lnz-XD-PS3"/>
                                     <constraint firstItem="WEo-If-fqN" firstAttribute="leading" secondItem="1G4-TI-GOy" secondAttribute="leading" constant="5" id="RlC-DW-Llq"/>
+                                    <constraint firstAttribute="centerY" secondItem="Nwv-By-8pd" secondAttribute="centerY" id="SxJ-3f-r9r"/>
                                     <constraint firstItem="WEo-If-fqN" firstAttribute="top" secondItem="1G4-TI-GOy" secondAttribute="top" constant="5" id="k0c-IQ-JeJ"/>
                                     <constraint firstAttribute="bottom" secondItem="WEo-If-fqN" secondAttribute="bottom" constant="5" id="wZe-YF-OKX"/>
+                                    <constraint firstAttribute="centerX" secondItem="Nwv-By-8pd" secondAttribute="centerX" id="xH7-UC-VoG"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="Nwv-By-8pd" id="WYe-eU-Xhy"/>
                                     <outlet property="imageView" destination="WEo-If-fqN" id="4o0-ly-vKP"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrPhotoHeaderView" id="sd5-m6-RY8" customClass="FlickrPhotoHeaderView" customModule="FlickrSearch" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="64" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1N-FH-oXT">
+                                    <rect key="frame" x="262" y="25" width="77" height="39"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="N1N-FH-oXT" secondAttribute="centerX" id="gVR-SV-Dye"/>
+                                <constraint firstAttribute="centerY" secondItem="N1N-FH-oXT" secondAttribute="centerY" id="lcH-fK-GoU"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="label" destination="N1N-FH-oXT" id="HZO-ix-RI6"/>
+                            </connections>
+                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="99q-4Y-d1z" id="pdd-x8-D3h"/>
                             <outlet property="delegate" destination="99q-4Y-d1z" id="lBk-wK-fV8"/>
                         </connections>
                     </collectionView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="yO5-UP-VOu">
                         <nil key="title"/>
                         <textField key="titleView" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" id="dPD-XN-4iQ">
@@ -59,7 +86,13 @@
                                 <outlet property="delegate" destination="99q-4Y-d1z" id="o4F-Yw-Dmt"/>
                             </connections>
                         </textField>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="9LV-QG-m91">
+                            <connections>
+                                <action selector="share:" destination="99q-4Y-d1z" id="bzA-PQ-VeY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZBW-nR-I2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
